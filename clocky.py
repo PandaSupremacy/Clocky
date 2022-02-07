@@ -2,6 +2,9 @@ from tkinter import *
 
 from time import strftime
 from tkinter.font import Font
+from Fonts import load_fonts
+
+load_fonts()
 
 root = Tk()#display root window
 root.title("Clocky")
@@ -17,10 +20,10 @@ def time2():
     label2.after(1000, time2) #1 sec
     
     
-label = Label(root, font = ("ds-digital", 50, "bold"), bg = "black", fg = "orange")
+label = Label(root, font = ("ds-digital", 50, "bold"), bg = "black", fg = "orange",padx=10)
 label.pack(anchor = 'center')
 
-label2 = Label(root, font = ("DS-Digital", 50, "bold"), bg = "black", fg = "turquoise")
+label2 = Label(root, font = ("DS-Digital", 50, "bold"), bg = "black", fg = "turquoise",padx=20)
 label2.pack(anchor = 'center')
 time1()
 time2()
